@@ -28,14 +28,12 @@
 		2F22E9221A21510A001DD9DC /* XZSound.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2F22E9211A21510A001DD9DC /* XZSound.mm */; };
 		2F278D761A0C0A7B00865A9B /* hud.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2F278D721A0C0A7B00865A9B /* hud.plist */; };
 		2F278D771A0C0A7B00865A9B /* hud.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F278D731A0C0A7B00865A9B /* hud.png */; };
-		2F430FE81B338F0F009988A9 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F430FE71B338F0F009988A9 /* GoogleMobileAds.framework */; };
 		2F430FF51B33A3E4009988A9 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F430FF41B33A3E4009988A9 /* EventKit.framework */; };
 		2F430FF71B33A409009988A9 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F430FF61B33A409009988A9 /* MessageUI.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		2F430FF91B33A429009988A9 /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F430FF81B33A429009988A9 /* EventKitUI.framework */; };
 		2F451E391B0BE0D400E936EC /* centerAlone.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F451E381B0BE0D400E936EC /* centerAlone.png */; };
 		2F485D721AC53898007B5B74 /* hallo_ring.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F485D711AC53898007B5B74 /* hallo_ring.png */; };
 		2F678A151AB8FB3D00BC89C0 /* XZParticleSystem.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2F678A141AB8FB3D00BC89C0 /* XZParticleSystem.mm */; };
-		2F678A231AB96D8B00BC89C0 /* Tools3.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F678A221AB96D8B00BC89C0 /* Tools3.m */; };
 		2FBA1D4C1B19231C004ED5A3 /* sfx_asteroid_destroy.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2FBA1D3F1B19231C004ED5A3 /* sfx_asteroid_destroy.wav */; };
 		2FBA1D4D1B19231C004ED5A3 /* sfx_asteroid_launch.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2FBA1D401B19231C004ED5A3 /* sfx_asteroid_launch.wav */; };
 		2FBA1D4E1B19231C004ED5A3 /* sfx_bounce.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2FBA1D411B19231C004ED5A3 /* sfx_bounce.wav */; };
@@ -65,8 +63,6 @@
 		2FCE04D41A1F27A500C6E4BB /* window.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2FCE04D21A1F27A500C6E4BB /* window.plist */; };
 		2FCE04D51A1F27A500C6E4BB /* window.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FCE04D31A1F27A500C6E4BB /* window.png */; };
 		2FD616C31B4B8F380092985B /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FD616C21B4B8F380092985B /* Social.framework */; };
-		2FDF380F1C6D29940032904A /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FDF380D1C6D29940032904A /* libcrypto.a */; };
-		2FDF38101C6D29940032904A /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FDF380E1C6D29940032904A /* libssl.a */; };
 		2FE038B01AD3EEBF00521DB7 /* PauseMenu.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2FE038AF1AD3EEBF00521DB7 /* PauseMenu.mm */; };
 		2FE6A88D1D1E428F00A254ED /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FE6A88C1D1E428F00A254ED /* Images.xcassets */; };
 		2FE8179619F6C0C600FFB281 /* Hero.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2FE8179319F6C0C600FFB281 /* Hero.mm */; };
@@ -79,7 +75,6 @@
 		2FE817BC19F6CFDC00FFB281 /* StatsManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2FE817BB19F6CFDC00FFB281 /* StatsManager.mm */; };
 		2FEF54AF1B54502000418060 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2FEF54AA1B54502000418060 /* Localizable.strings */; };
 		2FEF54B01B54502000418060 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2FEF54AD1B54502000418060 /* Localizable.strings */; };
-		2FF101231B2B95F000F2F316 /* NSData_NSDataZip.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2FF101221B2B95F000F2F316 /* NSData_NSDataZip.mm */; };
 		5B12100C19748281004C1E1D /* BridgeKitV3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B12100B19748281004C1E1D /* BridgeKitV3.framework */; };
 		5B121029197484DA004C1E1D /* BridgeKitV3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B12100B19748281004C1E1D /* BridgeKitV3.framework */; };
 		73A2C15A1B3650510055A767 /* sliders.png in Resources */ = {isa = PBXBuildFile; fileRef = 73A2C1591B3650510055A767 /* sliders.png */; };
@@ -164,8 +159,6 @@
 		2F485D711AC53898007B5B74 /* hallo_ring.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hallo_ring.png; path = Spritesheets/Background/hallo_ring.png; sourceTree = SOURCE_ROOT; };
 		2F678A131AB8FB3D00BC89C0 /* XZParticleSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XZParticleSystem.h; sourceTree = "<group>"; };
 		2F678A141AB8FB3D00BC89C0 /* XZParticleSystem.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = XZParticleSystem.mm; sourceTree = "<group>"; };
-		2F678A211AB96D8B00BC89C0 /* Tools3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tools3.h; sourceTree = "<group>"; };
-		2F678A221AB96D8B00BC89C0 /* Tools3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tools3.m; sourceTree = "<group>"; };
 		2FBA1D3F1B19231C004ED5A3 /* sfx_asteroid_destroy.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sfx_asteroid_destroy.wav; sourceTree = "<group>"; };
 		2FBA1D401B19231C004ED5A3 /* sfx_asteroid_launch.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sfx_asteroid_launch.wav; sourceTree = "<group>"; };
 		2FBA1D411B19231C004ED5A3 /* sfx_bounce.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sfx_bounce.wav; sourceTree = "<group>"; };
@@ -226,8 +219,6 @@
 		2FE817BB19F6CFDC00FFB281 /* StatsManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = StatsManager.mm; sourceTree = "<group>"; };
 		2FEF54AB1B54502000418060 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Localizable.strings; sourceTree = "<group>"; };
 		2FEF54AE1B54502000418060 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = Localizable.strings; sourceTree = "<group>"; };
-		2FF101211B2B95F000F2F316 /* NSData_NSDataZip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSData_NSDataZip.h; sourceTree = "<group>"; };
-		2FF101221B2B95F000F2F316 /* NSData_NSDataZip.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NSData_NSDataZip.mm; sourceTree = "<group>"; };
 		5B12100919748273004C1E1D /* libEGL.so */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libEGL.so; path = /usr/lib/armv7a/libEGL.so; sourceTree = SDKROOT; };
 		5B12100B19748281004C1E1D /* BridgeKitV3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BridgeKitV3.framework; path = System/Library/Frameworks/BridgeKitV3.framework; sourceTree = SDKROOT; };
 		5B121021197484A3004C1E1D /* NewProject Java.jar */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = archive.jar; path = "NewProject Java.jar"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -282,8 +273,6 @@
 			files = (
 				2F0FA1F31CD82C420055A9B3 /* GameplayKit.framework in Frameworks */,
 				2F0FA1E91CD8287E0055A9B3 /* libcocos2d.a in Frameworks */,
-				2FDF380F1C6D29940032904A /* libcrypto.a in Frameworks */,
-				2FDF38101C6D29940032904A /* libssl.a in Frameworks */,
 				2F430FF71B33A409009988A9 /* MessageUI.framework in Frameworks */,
 				2FD616C31B4B8F380092985B /* Social.framework in Frameworks */,
 				2F430FF91B33A429009988A9 /* EventKitUI.framework in Frameworks */,
@@ -306,7 +295,6 @@
 				B77F1B3C17B978D7009739AE /* UIKit.framework in Frameworks */,
 				B77F1B3E17B978D7009739AE /* Foundation.framework in Frameworks */,
 				B77F1B4017B978D7009739AE /* CoreGraphics.framework in Frameworks */,
-				2F430FE81B338F0F009988A9 /* GoogleMobileAds.framework in Frameworks */,
 				B77F1B4217B978D7009739AE /* CoreText.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -462,8 +450,6 @@
 		2FC5636719F57EA400651FE9 /* XZTools */ = {
 			isa = PBXGroup;
 			children = (
-				2F678A211AB96D8B00BC89C0 /* Tools3.h */,
-				2F678A221AB96D8B00BC89C0 /* Tools3.m */,
 			);
 			name = XZTools;
 			path = ../../lib/XZTools;
@@ -524,16 +510,6 @@
 			path = fr.lproj;
 			sourceTree = "<group>";
 		};
-		2FF101201B2B95F000F2F316 /* zip */ = {
-			isa = PBXGroup;
-			children = (
-				2FF101211B2B95F000F2F316 /* NSData_NSDataZip.h */,
-				2FF101221B2B95F000F2F316 /* NSData_NSDataZip.mm */,
-			);
-			name = zip;
-			path = ../../lib/zip;
-			sourceTree = "<group>";
-		};
 		73D766631A1E93AB00BDD6D5 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -551,7 +527,6 @@
 			children = (
 				2F0FA1DA1CD81BEA0055A9B3 /* extension */,
 				2F0FA1C41CD812D80055A9B3 /* cocos2d-ios.xcodeproj */,
-				2FF101201B2B95F000F2F316 /* zip */,
 				2FBA1D901B1E836E004ED5A3 /* reachability */,
 				2FC5636719F57EA400651FE9 /* XZTools */,
 			);
@@ -883,14 +858,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F678A231AB96D8B00BC89C0 /* Tools3.m in Sources */,
 				2F22E9221A21510A001DD9DC /* XZSound.mm in Sources */,
 				2FE8179D19F6C32200FFB281 /* Sky.mm in Sources */,
 				2FE817AD19F6C73F00FFB281 /* HudLayer.mm in Sources */,
 				2FE038B01AD3EEBF00521DB7 /* PauseMenu.mm in Sources */,
 				2FE8179A19F6C29600FFB281 /* Cat.mm in Sources */,
 				2F0FA1E51CD81D080055A9B3 /* ProfileSettings.mm in Sources */,
-				2FF101231B2B95F000F2F316 /* NSData_NSDataZip.mm in Sources */,
 				2F678A151AB8FB3D00BC89C0 /* XZParticleSystem.mm in Sources */,
 				2FE8179619F6C0C600FFB281 /* Hero.mm in Sources */,
 				2FE8179719F6C0C600FFB281 /* GameObject.mm in Sources */,
@@ -1186,12 +1159,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEFINES_MODULE = YES;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/../../lib/UnityAds/1.4.2",
-					"$(PROJECT_DIR)/../../lib/Chartboost/5.4",
-					"$(PROJECT_DIR)/../../lib/AdMob/7.3.1/**",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Source/Prefix.pch;
@@ -1207,18 +1175,10 @@
 					"Source/libs/cocos2d-iphone/external/Chipmunk/include",
 					"\"Source/libs/cocos2d-iphone/cocos2d-ui\"/**",
 					"\"Source/libs/cocos2d-iphone/external/ObjectAL\"/**",
-					"$(PROJECT_DIR)/../../lib/AdMob/7.3.1/**",
-					"$(PROJECT_DIR)/../../lib/Flurry/iOS-5.4.0/Flurry/**",
-					"$(PROJECT_DIR)/../../lib/ios-openssl/include/**",
 				);
 				INFOPLIST_FILE = Source/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/../../lib/TestFlightSDK/TestFlightSDK3",
-					"$(PROJECT_DIR)/../../lib/GameAnalytics/2.0.3",
-					"$(PROJECT_DIR)/../../lib/Flurry/iOS-5.4.0/Flurry/**",
-					"$(PROJECT_DIR)/../../lib/ios-openssl/lib/**",
-				);
+				LIBRARY_SEARCH_PATHS = "";
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"-lz",
@@ -1244,12 +1204,7 @@
 				COPY_PHASE_STRIP = YES;
 				DEFINES_MODULE = YES;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/../../lib/UnityAds/1.4.2",
-					"$(PROJECT_DIR)/../../lib/Chartboost/5.4",
-					"$(PROJECT_DIR)/../../lib/AdMob/7.3.1/**",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Source/Prefix.pch;
 				"GCC_PREPROCESSOR_DEFINITIONS[arch=*]" = (
@@ -1264,18 +1219,10 @@
 					"Source/libs/cocos2d-iphone/external/Chipmunk/include",
 					"\"Source/libs/cocos2d-iphone/cocos2d-ui\"/**",
 					"\"Source/libs/cocos2d-iphone/external/ObjectAL\"/**",
-					"$(PROJECT_DIR)/../../lib/AdMob/7.3.1/**",
-					"$(PROJECT_DIR)/../../lib/Flurry/iOS-5.4.0/Flurry/**",
-					"$(PROJECT_DIR)/../../lib/ios-openssl/include/**",
 				);
 				INFOPLIST_FILE = Source/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/../../lib/TestFlightSDK/TestFlightSDK3",
-					"$(PROJECT_DIR)/../../lib/GameAnalytics/2.0.3",
-					"$(PROJECT_DIR)/../../lib/Flurry/iOS-5.4.0/Flurry/**",
-					"$(PROJECT_DIR)/../../lib/ios-openssl/lib/**",
-				);
+				LIBRARY_SEARCH_PATHS = "";
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-ObjC",
