@@ -53,7 +53,6 @@
 		2FBA1D7D1B1DBE35004ED5A3 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FBA1D7C1B1DBE35004ED5A3 /* CoreTelephony.framework */; };
 		2FBA1D821B1E6F6F004ED5A3 /* main_menu.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 2FBA1D811B1E6F6F004ED5A3 /* main_menu.m4a */; };
 		2FBA1D871B1E79B1004ED5A3 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FBA1D861B1E79B1004ED5A3 /* GameKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		2FBA1D931B1E836E004ED5A3 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FBA1D921B1E836E004ED5A3 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		2FBA1D9D1B20FDD1004ED5A3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FBA1D9C1B20FDD1004ED5A3 /* SystemConfiguration.framework */; };
 		2FBA1D9F1B20FDE4004ED5A3 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FBA1D9E1B20FDE4004ED5A3 /* libsqlite3.dylib */; };
 		2FC5634D19F57BCE00651FE9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC5634C19F57BCE00651FE9 /* AppDelegate.m */; };
@@ -65,6 +64,7 @@
 		2FD616C31B4B8F380092985B /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FD616C21B4B8F380092985B /* Social.framework */; };
 		2FE038B01AD3EEBF00521DB7 /* PauseMenu.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2FE038AF1AD3EEBF00521DB7 /* PauseMenu.mm */; };
 		2FE6A88D1D1E428F00A254ED /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FE6A88C1D1E428F00A254ED /* Images.xcassets */; };
+		2FE6A8BD1D1F2F8000A254ED /* Tools3.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FE6A8BC1D1F2F8000A254ED /* Tools3.m */; };
 		2FE8179619F6C0C600FFB281 /* Hero.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2FE8179319F6C0C600FFB281 /* Hero.mm */; };
 		2FE8179719F6C0C600FFB281 /* GameObject.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2FE8179519F6C0C600FFB281 /* GameObject.mm */; };
 		2FE8179A19F6C29600FFB281 /* Cat.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2FE8179919F6C29600FFB281 /* Cat.mm */; };
@@ -201,6 +201,8 @@
 		2FE038AE1AD3EEBF00521DB7 /* PauseMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PauseMenu.h; sourceTree = "<group>"; };
 		2FE038AF1AD3EEBF00521DB7 /* PauseMenu.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PauseMenu.mm; sourceTree = "<group>"; };
 		2FE6A88C1D1E428F00A254ED /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "NewProject iOS/Images.xcassets"; sourceTree = SOURCE_ROOT; };
+		2FE6A8BB1D1F2F8000A254ED /* Tools3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Tools3.h; path = Source/libs/XZTools/Tools3.h; sourceTree = SOURCE_ROOT; };
+		2FE6A8BC1D1F2F8000A254ED /* Tools3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Tools3.m; path = Source/libs/XZTools/Tools3.m; sourceTree = SOURCE_ROOT; };
 		2FE8179219F6C0C600FFB281 /* Hero.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Hero.h; path = Source/Objects/GameObjects/Hero.h; sourceTree = "<group>"; };
 		2FE8179319F6C0C600FFB281 /* Hero.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = Hero.mm; path = Source/Objects/GameObjects/Hero.mm; sourceTree = "<group>"; };
 		2FE8179419F6C0C600FFB281 /* GameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameObject.h; path = Source/Objects/GameObjects/GameObject.h; sourceTree = "<group>"; };
@@ -450,6 +452,8 @@
 		2FC5636719F57EA400651FE9 /* XZTools */ = {
 			isa = PBXGroup;
 			children = (
+				2FE6A8BB1D1F2F8000A254ED /* Tools3.h */,
+				2FE6A8BC1D1F2F8000A254ED /* Tools3.m */,
 			);
 			name = XZTools;
 			path = ../../lib/XZTools;
@@ -873,10 +877,10 @@
 				2F0FA1E01CD81BEA0055A9B3 /* XZButton.m in Sources */,
 				2F0FA1FD1CD9EEA50055A9B3 /* RenderComponent.mm in Sources */,
 				2F0FA1DF1CD81BEA0055A9B3 /* ShatteredSprite.m in Sources */,
+				2FE6A8BD1D1F2F8000A254ED /* Tools3.m in Sources */,
 				2FC5635419F57D5A00651FE9 /* MainMenuLayer.mm in Sources */,
 				2FE817B619F6CC3300FFB281 /* SceneGame.mm in Sources */,
 				2F0FA1F71CD9545C0055A9B3 /* MoveComponent.mm in Sources */,
-				2FBA1D931B1E836E004ED5A3 /* Reachability.m in Sources */,
 				2FE817BC19F6CFDC00FFB281 /* StatsManager.mm in Sources */,
 				2F0FA1E81CD822950055A9B3 /* XZWindow.mm in Sources */,
 				2FC5637519F580CA00651FE9 /* GlobalSettings.mm in Sources */,
