@@ -63,8 +63,8 @@
 		2FCE04D51A1F27A500C6E4BB /* window.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FCE04D31A1F27A500C6E4BB /* window.png */; };
 		2FD616C31B4B8F380092985B /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FD616C21B4B8F380092985B /* Social.framework */; };
 		2FE038B01AD3EEBF00521DB7 /* PauseMenu.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2FE038AF1AD3EEBF00521DB7 /* PauseMenu.mm */; };
-		2FE6A88D1D1E428F00A254ED /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FE6A88C1D1E428F00A254ED /* Images.xcassets */; };
 		2FE6A8BD1D1F2F8000A254ED /* Tools3.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FE6A8BC1D1F2F8000A254ED /* Tools3.m */; };
+		2FE6A8C61D1F397900A254ED /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FE6A8C51D1F397900A254ED /* Default.png */; };
 		2FE8179619F6C0C600FFB281 /* Hero.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2FE8179319F6C0C600FFB281 /* Hero.mm */; };
 		2FE8179719F6C0C600FFB281 /* GameObject.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2FE8179519F6C0C600FFB281 /* GameObject.mm */; };
 		2FE8179A19F6C29600FFB281 /* Cat.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2FE8179919F6C29600FFB281 /* Cat.mm */; };
@@ -200,9 +200,9 @@
 		2FDF380E1C6D29940032904A /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = "../../lib/ios-openssl/lib/libssl.a"; sourceTree = "<group>"; };
 		2FE038AE1AD3EEBF00521DB7 /* PauseMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PauseMenu.h; sourceTree = "<group>"; };
 		2FE038AF1AD3EEBF00521DB7 /* PauseMenu.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PauseMenu.mm; sourceTree = "<group>"; };
-		2FE6A88C1D1E428F00A254ED /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "NewProject iOS/Images.xcassets"; sourceTree = SOURCE_ROOT; };
 		2FE6A8BB1D1F2F8000A254ED /* Tools3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Tools3.h; path = Source/libs/XZTools/Tools3.h; sourceTree = SOURCE_ROOT; };
 		2FE6A8BC1D1F2F8000A254ED /* Tools3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Tools3.m; path = Source/libs/XZTools/Tools3.m; sourceTree = SOURCE_ROOT; };
+		2FE6A8C51D1F397900A254ED /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		2FE8179219F6C0C600FFB281 /* Hero.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Hero.h; path = Source/Objects/GameObjects/Hero.h; sourceTree = "<group>"; };
 		2FE8179319F6C0C600FFB281 /* Hero.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = Hero.mm; path = Source/Objects/GameObjects/Hero.mm; sourceTree = "<group>"; };
 		2FE8179419F6C0C600FFB281 /* GameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameObject.h; path = Source/Objects/GameObjects/GameObject.h; sourceTree = "<group>"; };
@@ -614,7 +614,7 @@
 		B77F1B4617B978D7009739AE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				2FE6A88C1D1E428F00A254ED /* Images.xcassets */,
+				2FE6A8C51D1F397900A254ED /* Default.png */,
 				2FEF54A91B54502000418060 /* en.lproj */,
 				2FEF54AC1B54502000418060 /* fr.lproj */,
 				2FBA1D801B1E6F6F004ED5A3 /* music */,
@@ -777,8 +777,8 @@
 				2FBA1D511B19231C004ED5A3 /* sfx_game_over.wav in Resources */,
 				2F1E804A1B29205500581114 /* particleHP.png in Resources */,
 				2FBA1D4F1B19231C004ED5A3 /* sfx_earth_damaged.wav in Resources */,
-				2FE6A88D1D1E428F00A254ED /* Images.xcassets in Resources */,
 				2FBA1D541B19231C004ED5A3 /* sfx_menu_cancel.wav in Resources */,
+				2FE6A8C61D1F397900A254ED /* Default.png in Resources */,
 				2FBA1D4E1B19231C004ED5A3 /* sfx_bounce.wav in Resources */,
 				2F278D771A0C0A7B00865A9B /* hud.png in Resources */,
 				2FBA1D561B19231C004ED5A3 /* sfx_rolling.wav in Resources */,
@@ -1151,7 +1151,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+<<<<<<< HEAD
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+=======
+>>>>>>> origin/master
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -1196,7 +1199,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+<<<<<<< HEAD
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+=======
+>>>>>>> origin/master
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;

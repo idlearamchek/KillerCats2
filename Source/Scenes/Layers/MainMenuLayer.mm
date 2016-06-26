@@ -38,6 +38,10 @@
 -(void) createMainMenu{
     winSize = [CCDirector sharedDirector].viewSize;
     
+    CCSprite * logo = [CCSprite spriteWithImageNamed:@"Default.png"];
+    logo.position = ccp(winSize.width/2, winSize.height/2);
+    [self addChild:logo];
+    
     mStartBut = [[XZWindow alloc] init9SliceWithSize: CGSizeMake(160, 45) text:NSLocalizedString(@"FUNNIZATION", nil) asset: @"buttonOneSprite.png" textScale:0.9];
     
     __weak typeof(self) weakSelf = self;
@@ -46,8 +50,8 @@
         [weakSelf launchGame];
     };
 
-    mStartBut.anchorPoint = ccp(0.5, 0.5);
-    mStartBut.position = ccp(winSize.width/2, winSize.height/2);
+    mStartBut.anchorPoint = ccp(0.5, 0);
+    mStartBut.position = ccp(winSize.width/2, 5);
     [self addChild:mStartBut];
 }
 
