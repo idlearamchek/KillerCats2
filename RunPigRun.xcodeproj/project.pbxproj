@@ -224,7 +224,6 @@
 		5B12100919748273004C1E1D /* libEGL.so */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libEGL.so; path = /usr/lib/armv7a/libEGL.so; sourceTree = SDKROOT; };
 		5B12100B19748281004C1E1D /* BridgeKitV3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BridgeKitV3.framework; path = System/Library/Frameworks/BridgeKitV3.framework; sourceTree = SDKROOT; };
 		5B121021197484A3004C1E1D /* NewProject Java.jar */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = archive.jar; path = "NewProject Java.jar"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5B121034197485FE004C1E1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		73A2C1591B3650510055A767 /* sliders.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sliders.png; sourceTree = "<group>"; };
 		73A2C15F1B3657EF0055A767 /* mainmenu_XZLogobtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mainmenu_XZLogobtn.png; sourceTree = "<group>"; };
 		73A99B291ABE30A90050CF37 /* particleAloneSmoke.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = particleAloneSmoke.png; path = Spritesheets/Background/particleAloneSmoke.png; sourceTree = SOURCE_ROOT; };
@@ -627,7 +626,6 @@
 				2F1E80491B29205500581114 /* particleHP.png */,
 				2F485D711AC53898007B5B74 /* hallo_ring.png */,
 				2F0FA1E11CD81C2F0055A9B3 /* bg.png */,
-				5B121034197485FE004C1E1D /* Info.plist */,
 			);
 			name = Resources;
 			path = Source/Resources;
@@ -708,7 +706,7 @@
 				ORGANIZATIONNAME = Apportable;
 				TargetAttributes = {
 					B77F1B2D17B978D7009739AE = {
-						DevelopmentTeam = DBT3S5WBM2;
+						DevelopmentTeam = 7J3CUVQ4U5;
 						SystemCapabilities = {
 							com.apple.GameCenter = {
 								enabled = 1;
@@ -1154,12 +1152,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEFINES_MODULE = YES;
 				ENABLE_BITCODE = NO;
@@ -1188,8 +1184,10 @@
 					"-lz",
 					"-ObjC",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = felix.killer;
 				PRODUCT_NAME = NewProject;
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1199,11 +1197,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
 				DEFINES_MODULE = YES;
@@ -1231,8 +1228,10 @@
 					"-lz",
 					"-ObjC",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = felix.killer;
 				PRODUCT_NAME = NewProject;
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};

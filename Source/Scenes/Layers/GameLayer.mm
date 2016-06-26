@@ -241,29 +241,34 @@
     _spawnTimer -= dt;
     
     if(_spawnTimer <= 0){
-        _spawnTimer = 2.5;
-        
         CatLane lane = (CatLane)[Tools randWithRange:CAT_LANE_1 :CAT_LANE_MAX];
+        _spawnTimer = 1.5;
         
         float speed = 25;
         
         if(_timePlayed >= 10 && _timePlayed < 20){
             speed = 30;
+            _spawnTimer = 1.5;
         }
         else if(_timePlayed >= 20 && _timePlayed < 20){
             speed = 35;
+            _spawnTimer = 1.4;
         }
         else if(_timePlayed >= 30 && _timePlayed < 45){
             speed = 40;
+            _spawnTimer = 1.3;
         }
         else if(_timePlayed >= 45 && _timePlayed < 60){
             speed = 45;
+            _spawnTimer = 1.2;
         }
         else if(_timePlayed >= 60 && _timePlayed < 80){
             speed = 50;
+            _spawnTimer = 1.1;
         }
         else if(_timePlayed >= 80){
             speed = 55;
+            _spawnTimer = 1.0;
         }
 
         Cat * cat = [[Cat alloc] initWithLane:lane speed:speed];
