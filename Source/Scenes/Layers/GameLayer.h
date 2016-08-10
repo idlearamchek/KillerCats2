@@ -8,12 +8,22 @@
 #import "GameObject.h"
 #import "HudLayer.h"
 #import "Hero.h"
+#import "types.h"
 
 @class Sky;
+@class Cat;
+
+typedef struct{
+    float spawnTime;
+    
+    Cat * lastCat;
+}CatSpawnInfos;
+
 
 @interface GameLayer : CCNode{
-    
     int mTouchActive;
+    
+    CatSpawnInfos mSpawnInfos[CAT_LANE_MAX];
 }
 
 @property (nonatomic, readonly) CGSize winSize;
@@ -26,9 +36,10 @@
 @property (nonatomic, readonly) GKStateMachine * gameState;
 @property (nonatomic, readonly, unsafe_unretained) HudLayer * hudLayerRef;
 @property (nonatomic, readonly) float timePlayed;
+@property (nonatomic, readonly) float spawnTimer;
+@property (nonatomic, readonly) float spawnDelay;
+@property (nonatomic, readonly) float gameSpeed;
 
-
-@property (nonatomic, readwrite) float spawnTimer;
 
 + (CCScene*) scene;
 

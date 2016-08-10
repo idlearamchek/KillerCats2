@@ -9,7 +9,6 @@
 #import "GlobalSettings.h"
 #import "cocos2d.h"
 #import "Tools3.h"
-//#import "NSData_NSDataZip.h"
 
 @implementation GlobalSettings
 

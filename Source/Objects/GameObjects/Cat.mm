@@ -38,22 +38,22 @@
     
     switch(lane){
         case CAT_LANE_1:
-            initPos = ccp(winSize.width/2, winSize.height);
+            initPos = ccp(winSize.width/2 - 15, winSize.height - 10);
             direction = ccp(winSize.width/8 - initPos.x, -initPos.y);
 
             break;
         case CAT_LANE_2:
-            initPos = ccp(winSize.width/2, winSize.height);
+            initPos = ccp(winSize.width/2 - 5, winSize.height - 10);
             direction = ccp(winSize.width*3/8 - initPos.x, -initPos.y);
             
             break;
         case CAT_LANE_3:
-            initPos = ccp(winSize.width/2, winSize.height);
+            initPos = ccp(winSize.width/2 + 10, winSize.height - 10);
             direction = ccp(winSize.width*5/8 - initPos.x, -initPos.y);
             
             break;
         case CAT_LANE_4:
-            initPos = ccp(winSize.width/2, winSize.height);
+            initPos = ccp(winSize.width/2 + 25, winSize.height - 10);
             direction = ccp(winSize.width*7/8 - initPos.x, -initPos.y);
             
             break;
@@ -67,13 +67,17 @@
     return self;
 }
 
+-(float) speed{
+    return _moveComponent.speed;
+}
+
 - (void)updateWithDeltaTime:(NSTimeInterval)seconds{
     if(self.isIncapacitated) return;
     
     if(self.render.node.position.y > 300)
-        _sprite.scale = 0.4;
+        _sprite.scale = 0.35;
     else{
-        _sprite.scale = 0.4 + (300 - self.render.node.position.y) * 0.0045;
+        _sprite.scale = 0.35 + (300 - self.render.node.position.y) * 0.0045;
     }
     
     if(self.render.node.position.y < 15){
@@ -98,7 +102,7 @@
 //}
 
 -(CGRect) getTouchBox{
-    return CGRectMake(self.render.node.position.x, self.render.node.position.y, _sprite.contentSize.width, _sprite.contentSize.height);
+    return CGRectMake(self.render.node.position.x, self.render.node.position.y, _sprite.contentSize.width *0.9, _sprite.contentSize.height*0.8);
 }
 
 

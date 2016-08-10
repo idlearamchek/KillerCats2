@@ -56,6 +56,11 @@
     _hudLayerRef.gameRef = self;
     [_hudLayerRef createWithGameSettings:[ProfileSettings sharedInstance].currentGameSettings];
 
+    for (int i = 0; i < CAT_LANE_MAX; i++) {
+        mSpawnInfos[i].spawnTime = 1.5;
+        mSpawnInfos[i].lastCat = nil;
+    }
+    
     //Force 1 update to remove flicker due to scaling sky
     [self update:0];
     
@@ -76,6 +81,9 @@
     
     _hero = [[Hero alloc] initWithMaxHp:1];
     [self addGameObject:_hero :1];
+    
+    _gameSpeed = 25.0f;
+    _spawnDelay = 0.8f;
 }
 
 -(void) addGameObject:(GameObject*) obj :(NSUInteger) z{
@@ -237,42 +245,144 @@
     [_gameState updateWithDeltaTime:dt];
 }
 
+
+-(NSMutableArray*) getRandomLaneOrder{
+    NSMutableArray * adjCatLanes = [NSMutableArray array];
+    
+    for (CatLane lane = CAT_LANE_1; lane < CAT_LANE_MAX; ENUM_INC(lane, CatLane)) {
+
+        if(arc4random() % 2 == 0){
+            [adjCatLanes addObject:@(lane)];
+        }
+        else{
+            [adjCatLanes insertObject:@(lane) atIndex:0];
+        }
+    }
+
+//    switch (catLane) {
+//        case CAT_LANE_1:
+//            adjCatLanes = @[@(CAT_LANE_2)];
+//            break;
+//        case CAT_LANE_2:
+//            adjCatLanes = rand() % 2 == 0 ? @[@(CAT_LANE_1), @(CAT_LANE_3)] : @[@(CAT_LANE_3), @(CAT_LANE_1)];
+//            break;
+//        case CAT_LANE_3:
+//            adjCatLanes = rand() % 2 == 0 ? @[@(CAT_LANE_2), @(CAT_LANE_4)] : @[@(CAT_LANE_4), @(CAT_LANE_2)];
+//            break;
+//        case CAT_LANE_4:
+//            adjCatLanes = @[@(CAT_LANE_3)];
+//            break;
+//            
+//        default:
+//            break;
+//    }
+    
+    return adjCatLanes;
+}
+
+-(NSArray*) getAdjLaneFrom:(CatLane) lane{
+    NSArray * adjCatLanes = nil;
+
+        switch (lane) {
+            case CAT_LANE_1:
+                adjCatLanes = @[@(CAT_LANE_2)];
+                break;
+            case CAT_LANE_2:
+                adjCatLanes = rand() % 2 == 0 ? @[@(CAT_LANE_1), @(CAT_LANE_3)] : @[@(CAT_LANE_3), @(CAT_LANE_1)];
+                break;
+            case CAT_LANE_3:
+                adjCatLanes = rand() % 2 == 0 ? @[@(CAT_LANE_2), @(CAT_LANE_4)] : @[@(CAT_LANE_4), @(CAT_LANE_2)];
+                break;
+            case CAT_LANE_4:
+                adjCatLanes = @[@(CAT_LANE_3)];
+                break;
+    
+            default:
+                break;
+        }
+    
+    return adjCatLanes;
+}
+
 -(void) handleSpawn:(NSTimeInterval) dt{
+    _gameSpeed += dt * 1.1;
+    
     _spawnTimer -= dt;
     
     if(_spawnTimer <= 0){
-        CatLane lane = (CatLane)[Tools randWithRange:CAT_LANE_1 :CAT_LANE_MAX];
-        _spawnTimer = 1.5;
+        _spawnTimer = _spawnDelay;
+        _spawnDelay -= 0.005;
+        if(_spawnDelay < 0)
+            _spawnDelay = 0;
         
-        float speed = 25;
-        
-        if(_timePlayed >= 10 && _timePlayed < 20){
-            speed = 30;
-            _spawnTimer = 1.5;
-        }
-        else if(_timePlayed >= 20 && _timePlayed < 20){
-            speed = 35;
-            _spawnTimer = 1.4;
-        }
-        else if(_timePlayed >= 30 && _timePlayed < 45){
-            speed = 40;
-            _spawnTimer = 1.3;
-        }
-        else if(_timePlayed >= 45 && _timePlayed < 60){
-            speed = 45;
-            _spawnTimer = 1.2;
-        }
-        else if(_timePlayed >= 60 && _timePlayed < 80){
-            speed = 50;
-            _spawnTimer = 1.1;
-        }
-        else if(_timePlayed >= 80){
-            speed = 55;
-            _spawnTimer = 1.0;
-        }
+        //temp
+        float catHeight = 60;
+        float hamsterHeight = 60;
 
-        Cat * cat = [[Cat alloc] initWithLane:lane speed:speed];
-        [self addGameObject:cat];
+        float spawnPos = _winSize.height - 10;
+        
+        NSMutableArray * lanesToCheck = [self getRandomLaneOrder];
+        NSMutableArray * lanesWhereSpawnIsPossible = [NSMutableArray array];
+        
+        for (NSNumber * nbLane in lanesToCheck) {
+            CatLane catLane = (CatLane)[nbLane intValue];
+            
+            Cat * lastCat = mSpawnInfos[[nbLane intValue]].lastCat;
+            if(lastCat && lastCat.render.node.parent == nil){ //cat is dead
+                mSpawnInfos[[nbLane intValue]].lastCat = nil;
+            }
+            
+            if(lastCat == nil){
+                [lanesWhereSpawnIsPossible addObject:@([nbLane intValue])];
+            }
+            else{
+                BOOL isAdjBlocked = YES;
+
+                CGPoint norm = ccpNormalize(lastCat.moveComponent.direction);
+                float diff = spawnPos - lastCat.render.node.position.y;
+                
+                float diffSpeed = _gameSpeed/lastCat.speed;
+                
+                if(diff > (catHeight + hamsterHeight) * fabs(norm.y) * diffSpeed){
+                    NSArray * adjArray = [self getAdjLaneFrom:catLane];
+
+                    for (NSNumber * nbAdjLane in adjArray) {
+                        CatLane adjLane = (CatLane)[nbAdjLane intValue];
+                        
+                        Cat * adjLastCat = mSpawnInfos[adjLane].lastCat;
+
+                        if(adjLastCat){
+                            float adjDiffSpeed = _gameSpeed/adjLastCat.speed;
+                            CGPoint adjNorm = ccpNormalize(adjLastCat.moveComponent.direction);
+                            float adjDiff = spawnPos - adjLastCat.render.node.position.y;
+                            
+                            if(adjDiff > (catHeight + hamsterHeight) * fabs(adjNorm.y) * adjDiffSpeed){
+                                isAdjBlocked = NO;
+                            }
+                        }
+                        else
+                            isAdjBlocked = NO;
+                        
+                        if(!isAdjBlocked)
+                            break;
+                    }
+                    
+                    if(!isAdjBlocked){
+                        // hamster can move freely here
+                        [lanesWhereSpawnIsPossible addObject:@(catLane)];
+                    }
+                }
+            }
+        }
+        
+
+        if([lanesWhereSpawnIsPossible count] > 1){
+            CatLane spawnLane = (CatLane)[[lanesWhereSpawnIsPossible objectAtIndex:[Tools randWithRange:0 :(int)[lanesWhereSpawnIsPossible count]]] intValue];
+            
+            Cat * newCat = [[Cat alloc] initWithLane:spawnLane speed:_gameSpeed];
+            [self addGameObject:newCat];
+            mSpawnInfos[spawnLane].lastCat = newCat;
+        }
     }
 }
 

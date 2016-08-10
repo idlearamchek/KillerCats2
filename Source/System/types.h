@@ -94,6 +94,28 @@ typedef enum{
     G_MODE_CREDIT,
 }GameMode;
 
+typedef enum{
+    CAT_LANE_NONE = -1,
+    CAT_LANE_1,
+    CAT_LANE_2,
+    CAT_LANE_3,
+    CAT_LANE_4,
+    CAT_LANE_MAX,
+}CatLane;
+
+
+typedef enum{
+    CAT_NONE,
+    CAT_1,
+    CAT_2,
+    CAT_3,
+    CAT_4,
+    CAT_5,
+    CAT_6,
+    CAT_MAX,
+}CatType;
+
+
 
 #define GL_BLEND_NO_TRANSPARENCY (ccBlendFunc){GL_ONE, GL_ZERO}
 #define GL_BLEND_ADDITIVE (ccBlendFunc){GL_SRC_ALPHA, GL_ONE}
