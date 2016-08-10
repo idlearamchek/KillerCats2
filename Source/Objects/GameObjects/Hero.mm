@@ -92,7 +92,7 @@
 
 
 -(CGRect) getTouchBox{
-    return CGRectMake(self.render.node.position.x, self.render.node.position.y, _sprite.contentSize.width, _sprite.contentSize.height);
+    return CGRectMake(self.render.node.position.x, self.render.node.position.y, _sprite.contentSize.width, _sprite.contentSize.height * 0.8);
 }
 
 - (void)updateWithDeltaTime:(NSTimeInterval)dt{
