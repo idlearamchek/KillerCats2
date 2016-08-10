@@ -38,22 +38,22 @@
     
     switch(lane){
         case CAT_LANE_1:
-            initPos = ccp(winSize.width/2 - 15, winSize.height - 10);
+            initPos = ccp(winSize.width/2, winSize.height);
             direction = ccp(winSize.width/8 - initPos.x, -initPos.y);
 
             break;
         case CAT_LANE_2:
-            initPos = ccp(winSize.width/2 - 5, winSize.height - 10);
+            initPos = ccp(winSize.width/2, winSize.height);
             direction = ccp(winSize.width*3/8 - initPos.x, -initPos.y);
             
             break;
         case CAT_LANE_3:
-            initPos = ccp(winSize.width/2 + 10, winSize.height - 10);
+            initPos = ccp(winSize.width/2, winSize.height);
             direction = ccp(winSize.width*5/8 - initPos.x, -initPos.y);
             
             break;
         case CAT_LANE_4:
-            initPos = ccp(winSize.width/2 + 25, winSize.height - 10);
+            initPos = ccp(winSize.width/2, winSize.height);
             direction = ccp(winSize.width*7/8 - initPos.x, -initPos.y);
             
             break;

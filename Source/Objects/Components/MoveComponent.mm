@@ -25,17 +25,17 @@
 -(void) updateWithDeltaTime:(NSTimeInterval)dt{
     CGSize winSize = [CCDirector sharedDirector].viewSize;
     
-    float realSpeed = _speed * (pow((winSize.height - _gameObj.render.node.position.y), 1.5) / winSize.height);
+    float realSpeed = _speed * (pow((winSize.height - _gameObj.render.node.position.y), 1.6) / winSize.height);
     
 //    if(_gameObj.render.node.position.y > winSize.height * 0.8){
 //        realSpeed += 2;
 //    }
 
-    if(realSpeed < 10)
-        realSpeed = 10;
+    if(realSpeed < 100)
+        realSpeed = 100;
 
-    if(realSpeed > 200)
-        realSpeed = 200;
+    if(realSpeed > 300)
+        realSpeed = 300;
 
     _gameObj.render.node.position = ccpAdd(_gameObj.render.node.position, ccpMult(_direction, realSpeed * dt));
 }
